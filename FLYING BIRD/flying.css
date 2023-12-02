@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #87CEEB; /* Sky Blue */
+  }
+  
+  .bird-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation: flyingBird 5s linear infinite;
+  }
+  
+  .bird {
+    position: absolute;
+    width: 100px;
+    height: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+  }
+  
+  .wing {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: #F4A460; /* Sandy Brown */
+    border-radius: 50%;
+    top: 0;
+  }
+  
+  .wing:first-child {
+    left: 20px;
+    transform-origin: right center;
+    animation: flapLeft 0.5s infinite alternate;
+  }
+  
+  .wing:last-child {
+    right: 20px;
+    transform-origin: left center;
+    animation: flapRight 0.5s infinite alternate;
+  }
+  
+  .body {
+    position: absolute;
+    width: 60px;
+    height: 40px;
+    background-color: #E85D04; /* Reddish Orange */
+    border-radius: 50%;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+  }
+  
+  .head {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #F4A460; /* Sandy Brown */
+    border-radius: 50%;
+    top: 50%;
+    left: 70px;
+    transform: translate(0, -50%);
+  }
+  
+  .eye {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 78px;
+    transform: translate(0, -50%);
+  }
+  
+  @keyframes flapLeft {
+    0%, 100% {
+      transform: rotate(-20deg);
+    }
+    50% {
+      transform: rotate(20deg);
+    }
+  }
+  
+  @keyframes flapRight {
+    0%, 100% {
+      transform: rotate(20deg);
+    }
+    50% {
+      transform: rotate(-20deg);
+    }
+  }
+  
+  @keyframes flyingBird {
+    0% {
+      left: -50px;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+  

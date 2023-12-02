@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+  }
+  
+  .panda-container {
+    position: relative;
+  }
+  
+  .panda {
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    animation: move 3s infinite;
+  }
+  
+  .ear {
+    width: 30px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+  }
+  
+  .left {
+    left: -10px;
+  }
+  
+  .right {
+    right: -10px;
+  }
+  
+  .eye {
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 30px;
+    left: 35px;
+  }
+  
+  .pupil {
+    width: 5px;
+    height: 5px;
+    background-color: #000;
+    border-radius: 50%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
+  
+  .nose {
+    width: 5px;
+    height: 15px;
+    background-color: #000;
+    position: absolute;
+    top: 40px;
+    left: 47px;
+  }
+  
+  .mouth {
+    width: 15px;
+    height: 5px;
+    background-color: #000;
+    position: absolute;
+    top: 60px;
+    left: 40px;
+    border-radius: 10px;
+  }
+  
+  @keyframes move {
+    0%, 100% {
+      top: 0;
+    }
+    50% {
+      top: 150px;
+    }
+  }
+  

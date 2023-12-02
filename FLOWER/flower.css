@@ -1,0 +1,92 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.flower {
+    position: relative;
+    width: 100px;
+    height: 150px;
+}
+
+.stem {
+    width: 10px;
+    height: 80px;
+    background-color: #008000;
+    position: absolute;
+    top: 70px;
+    left: 45px;
+}
+
+.center {
+    width: 40px;
+    height: 40px;
+    background-color: #ff4500;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+.petals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    left: 5px;
+    animation: rotate 4s linear infinite;
+}
+
+.petal {
+    width: 60px;
+    height: 100px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    position: absolute;
+    transform-origin: bottom center;
+}
+
+.petal:nth-child(1) {
+    transform: rotate(0deg);
+}
+
+.petal:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.petal:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.petal:nth-child(4) {
+    transform: rotate(135deg);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.petal {
+    animation: petalOpenClose 5s ease-in-out infinite alternate;
+}
+
+
+@keyframes petalOpenClose {
+    0%, 100% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0.7);
+    }
+    
+}
